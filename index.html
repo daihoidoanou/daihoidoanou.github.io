@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="webthemez">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Đại hội Đoàn Trường Đại học Mở Tp. Hồ Chí Minh</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+  <div class="container-fluid m-0 p-0 bg-none text-center mt-5">
+    <h1 class="text-center p-2 title">
+      <marquee style="font-size: 40px; word-spacing: 4.5px;" behavior="scroll" direction="left">CHÀO MỪNG ĐẠI HỘI ĐOÀN TRƯỜNG</marquee>
+      <marquee style="font-size: 40px;" behavior="scroll" direction="right">ĐẠI HỌC MỞ THÀNH PHỐ HỒ CHÍ MINH</marquee>
+      <marquee style="font-size: 40px; word-spacing: 8.5px;" behavior="scroll" direction="left">LẦN THỨ XII - NHIỆM KỲ 2022 - 2024</marquee>
+    </h1>
+    <div id="countdown" class="row mt-5">
+      <div class="col-sm-3 col-xs-6 item days">
+        <div>10</div>
+        <p>NGÀY</p>
+      </div>
+      <div class="col-sm-3 col-xs-6 item hours">
+        <div>10</div>
+        <p>GIỜ</p>
+      </div>
+      <div class="col-sm-3 col-xs-6 item minutes">
+        <div>10</div>
+        <p>PHÚT</p>
+      </div>
+      <div class="col-sm-3 col-xs-6 item seconds">
+        <div>10</div>
+        <p>GIÂY</p>
+      </div>
+      
+    </div>
+    <div class="loiChuc mt-5">
+      <a class="btn btn-outline-primary" href="http://...">XEM LỜI CHÚC GỬI ĐẾN ĐẠI HỘI</a>
+    </div>
+  </div>
+
+  <!-- Messenger Plugin chat Code -->
+  <div id="fb-root"></div>
+
+  <!-- Your Plugin chat code -->
+  <div id="fb-customer-chat" class="fb-customerchat">
+  </div>
+
+  <script>
+    var chatbox = document.getElementById('fb-customer-chat');
+    chatbox.setAttribute("page_id", "111186354985382");
+    chatbox.setAttribute("attribution", "biz_inbox");
+  </script>
+
+  <!-- Your SDK code -->
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        xfbml            : true,
+        version          : 'v14.0'
+      });
+    };
+
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+  
+<!-- JS files--> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="js/jquery.countdown.js"></script>
+<script src="js/main.js"></script> 
+</body>
+</html>
