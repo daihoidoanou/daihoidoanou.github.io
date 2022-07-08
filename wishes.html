@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CHÀO MỪNG ĐẠI HỘI XI</title>
+        <link rel="shortcut icon" href="./assets/img/LOG-XI.png" type="image/x-icon" />
+    </head>
+    <body>
+        <div class="app">
+            <header class="header">
+                <div class="header-grid grid">
+                    <div class="header-left">
+                        <div class="header-left__img">
+                            
+                        </div>
+                    </div>
+                    <div class="header-main">
+                        <div class="header-main__text">
+                            ĐOÀN VIÊN THANH NIÊN KHOA CÔNG NGHỆ THÔNG TIN
+                            NHIỆT LIỆT CHÀO MỪNG ĐẠI HỘI ĐẠI BIỂU ĐOÀN TNCS HỒ CHÍ
+                            MINH KHOA CÔNG NGHỆ THÔNG TIN LẦN XI NHIỆM KỲ 2022 -
+                            2024
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <div class="header-right__img">
+                            
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="main">
+                <div class="main-grid grid">
+                    <div class="main-heading">
+                        Đã có
+                        <span></span>
+                        thông điệp gửi đến Đại hội
+                    </div>
+                    <div class="main-body">
+                        <div class="main-left">
+                            <div class="main-left__logo">
+                               
+                            </div>
+                        </div>
+                        <div class="main-right"></div>
+                    </div>
+                    <div class="main-submit">Gửi thông điệp của bạn</div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div class="footer-grid grid">
+                    <div class="footer-text">
+                        &copy; 2022 by <a class="text-deco" href="https://www.facebook.com/CLBLapTrinhTrenThietBiDiDong">MPC</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="./js/main.js"></script>
+        <script>
+            (async () => {
+                await axios
+                    .get("https://dai-hoi-xi.herokuapp.com/post/all-post")
+                    .then((res) => {
+                        const htmls = res.data?.posts
+                            .map((item) => {
+                                return `
+                            <div class="main-right__item">
+                                <div class="main-right__item-avt">
+                                    <img src=${item?.avt} alt="" width="100px" />
+                                </div>
+                                <div class="main-right__item-body">
+                                    <div class="main-right__item-name">
+                                        ${item?.name}
+                                    </div>
+                                    <div class="main-right__item-text">
+                                        ${item?.content}
+                                    </div>
+                                </div>
+                            </div>
+                            `;
+                            })
+                            .join("");
+                        $(".main-right").innerHTML = htmls;
+                        $(".main-heading").querySelector("span").innerHTML =
+                            res.data?.total;
+                    })
+                    .catch((err) => console.log(err.response?.data));
+            })();
+
+            $(".main-submit").onclick = () =>
+                (window.location.href = "./send-wishes.html");
+        </script>
+    </body>
+</html>

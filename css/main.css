@@ -12,6 +12,7 @@ body {
 
 * {
 	font-family: 'Open Sans', sans-serif;
+	transition: all 0.1s ease;
 }
 
 /* title */
@@ -30,25 +31,35 @@ body {
 	max-width: 500px;
 	margin: 0 auto;
 }
-#countdown .item div {
+#countdown .item h3 {
 	background: var(--blue);
 	color: #ffffff;
-	font-size: 35px;
 	font-weight: 800;
+	border-radius: 10px;
+	padding: 10px 0px;
 }
 
-#countdown .item p {
+#countdown .item h5 {
 	margin-top: 10px;
+	padding: 3px 0px;
 	margin-bottom: 50px;
-	background: var(--blue);
-	color: #ffffff;
-	font-size: 25px;
-	font-weight: 800;
+	border: 3px solid var(--blue);
+	color: var(--blue);
+	font-weight: 500;
+	border-radius: 10px;
 }
 
 /* style loi chuc */
 .loiChuc .btn {
-	font-size: 20px;
 	font-weight: 700;
 	border-width: 3px;
 }
+@media only screen and (max-width: 480px){
+	.col-xs-6 {
+		width: 50% !important;
+	}
+
+	#countdown {
+		transform: scale(0.7);
+	}
+  }
