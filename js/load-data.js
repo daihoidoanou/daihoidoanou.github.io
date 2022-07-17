@@ -30,13 +30,6 @@
         .catch((err) => console.log(err.response?.data));
 })();
 
-const start = new Date().getTime();
-const end = new Date().getTime().now();
-
-const diff = end - start;
-const seconds = Math.floor(diff / 1000 % 60);
-
-console.log(seconds);
 
 $(".main-submit").onclick = () =>
 
