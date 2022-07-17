@@ -29,4 +29,4 @@
             })();
 
             $(".main-submit").onclick = () =>
-                (window.location.href = "./index.html");
+                (window.location.href = "./send-wishes.html");
