@@ -1,9 +1,13 @@
 :root {
 	--blue: #0054a8;
 	--white: #ffffff;
+	--header-height: 200px;
+	--footer-height: 48px;
+	--text-color: #679be9;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
 body {
 	background-image: url("../images/bg.png");
 	background-size: cover;
@@ -31,6 +35,7 @@ body {
 	max-width: 500px;
 	margin: 0 auto;
 }
+
 #countdown .item h3 {
 	background: var(--blue);
 	color: #ffffff;
@@ -54,7 +59,8 @@ body {
 	font-weight: 700;
 	border-width: 3px;
 }
-@media only screen and (max-width: 480px){
+
+@media only screen and (max-width: 480px) {
 	.col-xs-6 {
 		width: 50% !important;
 	}
@@ -62,4 +68,4 @@ body {
 	#countdown {
 		transform: scale(0.7);
 	}
-  }
+}

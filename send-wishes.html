@@ -1,71 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CHÀO MỪNG ĐẠI HỘI XI</title>
-        <link rel="shortcut icon" href="./assets/img/LOG-XI.png" type="image/x-icon"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="./js/main.js"></script>
-        <style>
-            body {
-                max-width: 800px;
-            }
-            * {
-                transition: all 0.5s ease;
-            }
-            .main-left__wrap-img:hover {
-                cursor: pointer;
-                opacity: 0.8;
-            }
-        </style>
-    </head>
-    <body class="container-fluid">
-        <section class="row jumbotron bg-white">
-            <div class="main-left col-6">
-                <div class="main-left__wrap" title="Tải lên hình ảnh của bạn! Tỉ lệ 1:1">
-                    <img style="border-radius: 50%; border: 1px solid var(--blue)" class="main-left__wrap-img" src="" alt="Picture" width="200px"/>
-                    <div class="loading"><span></span></div>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đại hội Đoàn Trường Đại học Mở Tp. Hồ Chí Minh</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/senwishstyle.css" />
+</head>
+
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="header-grid grid">
+                <div class="header-left">
+                    <div class="header-left__img">
+                        <a href="./index.html"><img src="images/logo.png" type="image/logo-x" alt="logo"></a>
+                    </div>
                 </div>
-                <input class="main-left__inp" type="file" hidden />
+                <div class="header-main">
+                    <img src="./images/send-whises-removebg-preview.png" alt="Title main" width="90%"
+                        style="max-width: 800px">
+                </div>
+                <div class="header-right">
+                    <div class="header-right__img">
+
+                    </div>
+                </div>
             </div>
-            <div class="main-right col-6">
-                <form class="main-right__form">
-                    <div class="main-right__form-group">
-                        <div class="main-right__form-title label">
-                            Thông điệp của bạn
-                        </div>
-                        <textarea required class="main-right__form-input form-control" name="" id="" cols="30" rows="10"></textarea>
-                        <div class="main-right__form-count-char">
-                            <span class="count-char__now">0</span>
-                            /
-                            <span class="count-char__max">400</span>
-                        </div>
+        </header>
+
+        <section class="main">
+            <div class="main-grid grid">
+                <div class="main-left">
+                    <div class="main-left__wrap">
+                        <img class="main-left__wrap-img" src="" alt="Hmmm, I think it can a your picture ~~" />
+                        <div class="loading"><span></span></div>
                     </div>
-                    <div class="main-right__form-group">
-                        <div class="main-right__form-title">Ký tên</div>
-                        <input required type="text" class="main-right__form-input form-control"/>
-                        <div class="main-right__form-count-char">
-                            <span class="count-char__now">0</span>
-                            /
-                            <span class="count-char__max">40</span>
+                    <input class="main-left__inp" type="file" hidden />
+                </div>
+                <div class="main-right">
+                    <form class="main-right__form">
+                        <div class="main-right__form-group">
+                            <div class="main-right__form-title">Họ và tên của bạn: </div>
+                            <input required type="text" class="main-right__form-input" />
+                            <div class="main-right__form-count-char">
+                                <span class="count-char__now">0</span>
+                                /
+                                <span class="count-char__max">40</span>
+                            </div>
                         </div>
-                    </div>
-                    <button type="submit" class="main-right__form-submit-btn btn btn-primary form-control">Gửi thông điệp</button>
-                </form>
+                        <div class="main-right__form-group">
+                            <div class="main-right__form-title">
+                                Lời chúc của bạn
+                            </div>
+                            <textarea required class="main-right__form-input" name="" id="" cols="30"
+                                rows="10"></textarea>
+                            <div class="main-right__form-count-char">
+                                <span class="count-char__now">0</span>
+                                /
+                                <span class="count-char__max">400</span>
+                            </div>
+                        </div>
+                        <button type="submit" class="main-right__form-submit-btn">
+                            Gửi lời chúc
+                        </button>
+                    </form>
+                </div>
             </div>
         </section>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+        <footer class="footer">
+            <div class="footer-grid grid">
+                <div class="footer-text">
+                    &copy; 2022 Bản quyền thuộc MPC
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/app.js"></script>
     <script>
         const app = (() => {
             const avtLS =
                 JSON.parse(localStorage.getItem("avtLS")) ||
-                "https://cdn4.iconfinder.com/data/icons/user-gradient-set-1/128/user_action_set_2-22-512.png";
+                "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png";
 
             return {
                 isLoading: false,
@@ -187,5 +209,6 @@
             };
         })().start();
     </script>
-    </body>
+</body>
+
 </html>
