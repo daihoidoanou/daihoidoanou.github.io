@@ -92,8 +92,8 @@
                         ) => {
                             e.preventDefault();
                             const avt = mainLeftWrap.querySelector("img").src;
-                            const content = inputs[0].value;
-                            const name = inputs[1].value;
+                            const name= inputs[0].value;
+                            const content = inputs[1].value;
                             if (avt && name && content) {
                                 const data = {
                                     avt,
