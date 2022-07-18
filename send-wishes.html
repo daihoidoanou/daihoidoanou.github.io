@@ -35,8 +35,8 @@
         <section class="main">
             <div class="main-grid grid">
                 <div class="main-left">
-                    <div class="main-left__wrap">
-                        <img class="main-left__wrap-img" src="" alt="Hmmm, I think it can a your picture ~~" />
+                    <div class="main-left__wrap" title="Upload your photo!">
+                        <img class="main-left__wrap-img" src="" alt="Hmmm, I think it can be a your picture ~~" />
                         <div class="loading"><span></span></div>
                     </div>
                     <input class="main-left__inp" type="file" hidden />
@@ -75,8 +75,8 @@
         <footer class="footer">
             <div class="footer-grid grid">
                 <div class="footer-text">
-                    &copy; 2022
-                </div>
+                    &copy; 2022. Powered by IT-OU Youth Union
+               </div>
             </div>
         </footer>
     </div>
@@ -87,7 +87,7 @@
         const app = (() => {
             const avtLS =
                 JSON.parse(localStorage.getItem("avtLS")) ||
-                "https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png";
+                "https://i.im.ge/2022/07/18/FrHFAh.png";
 
             return {
                 isLoading: false,

@@ -6,7 +6,7 @@ const header = $(".header");
 const footer = $(".footer");
 
 if (logoXI) {
-    logoXI.onclick = () => (window.location.href = "./home.html");
+    logoXI.onclick = () => (window.location.href = "./index.html");
 }
 
 window.onscroll = function (e) {

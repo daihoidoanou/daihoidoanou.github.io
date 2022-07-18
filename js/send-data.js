@@ -109,7 +109,7 @@
                                     .then((res) => {
                                         inputs[0].value = null;
                                         inputs[1].value = null;
-                                        window.location.href = "./home.html";
+                                        window.location.href = "./index.html";
                                     })
                                     .catch((err) =>
                                         console.log(err.response?.data)

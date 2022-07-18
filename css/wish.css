@@ -45,7 +45,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    background: linear-gradient(to left, #77ceeb, #a3dcf8);
+    background: rgb(1, 64, 128);
     padding: 12px 8px;
     margin-inline-start: auto;
     border-radius: 4px;
@@ -57,7 +57,7 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    background: linear-gradient(to right, #db8554, #d85f18);
+    background: orangered;
     padding: 12px 8px;
     border-radius: 4px;
     min-height: 80px;
@@ -113,11 +113,19 @@
     border-radius: 4px;
     margin-left: auto;
     transition: all ease-in 0.25s;
+    animation: zoomInOut 1s infinite alternate;
+}
+
+
+@keyframes zoomInOut {
+    from {transform: scale(1.0);}
+    to {transform: scale(0.8);}
 }
 
 .main-submit:hover {
     cursor: pointer;
     filter: brightness(0.95);
+    background: #e84a27;
 }
 
 /*----------------------------------------------------------------*/
