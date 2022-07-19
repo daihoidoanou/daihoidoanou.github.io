@@ -11,10 +11,10 @@
                                 </div>
                                 <div class="main-right__item-body">
                                     <div class="main-right__item-name">
-                                        ${item?.name}
+                                        ${item?.content}
                                     </div>
                                     <div class="main-right__item-text">
-                                        ${item?.content}
+                                        ${item?.name}
                                     </div>
                                 </div>
                             </div>
